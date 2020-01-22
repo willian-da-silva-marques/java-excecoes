@@ -18,13 +18,15 @@ public class FluxoComErro {
 		System.out.println("Fim do metodo1");
 	}
 
+	@SuppressWarnings("unused")
 	private static void metodo2() {
 		int i = 0;
 		System.out.println("Início do metodo2");
-		while(i < 100) {			
-			metodo2();
-			i++;
-		}
+		/* Esse bloco while provocará um java.lang.StackOverflowError */
+//		while(i < 40) {
+//			metodo2();
+//			i++;
+//		}
 		System.out.println("Fim do metodo2");
 	}
 }
